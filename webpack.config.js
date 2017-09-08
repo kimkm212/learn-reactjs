@@ -12,7 +12,6 @@ module.exports = {
         contentBase: __dirname + '/public/'
     },
 
-
     module: {
         loaders: [
             {
