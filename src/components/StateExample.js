@@ -6,7 +6,7 @@ class StateExample extends React.Component {
         super(props);
         this.state = {
             header : "해더 시작 스테이트"
-            ,content: "콘텐트 시작 스테이트"
+            ,content: "콘텐트 시작 스테이트 "
         }
     }
     
