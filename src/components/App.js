@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import Content from './Content/Content';
 import RandomNumApp from './RandomNum/RandomNumApp';
 import Contacts from "./ContactInfo/ContactInfo";
+import Counter from "./Numbers/Counter";
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
                           body={this.props.contentBody}/>
                 <RandomNumApp/>
                 <Contacts/>
+                <Counter/>
             </div>
         );
     }
