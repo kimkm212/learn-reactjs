@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header/Header';
 import Content from './Content/Content';
 import RandomNumApp from './RandomNum/RandomNumApp';
+import Contacts from "./ContactInfo/ContactInfo";
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
                 <Content title={this.props.contentTitle}
                           body={this.props.contentBody}/>
                 <RandomNumApp/>
+                <Contacts/>
             </div>
         );
     }
