@@ -1,8 +1,10 @@
+const webpack = require('webpack');
+const path = require('path');
+
 module.exports = {
     entry: './src/index.js',
-
     output: {
-        path: __dirname + '/public/',
+        path: path.resolve(__dirname , '/public/'),
         filename: 'bundle.js'
     },
 
@@ -14,17 +16,37 @@ module.exports = {
 
 
     module: {
-        loaders: [
+        rules: [
             {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015', 'react', 'stage-2'],
-                    plugins: ["transform-object-rest-spread"]
-                }
+                test : /\.js$/,
+                loader : 'babel-loader',
+                options : {
+                    presets : [ 'es2015', 'react', 'stage-2'],
+                    plugins : ["transform-object-rest-spread"]
+                },
+                exclude : /node_modules/
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             }
+
         ]
+        /*        loaders: [
+                    {
+                        test: /\.js$/,
+                        loader: 'babel-loader',
+                        exclude: /node_modules/,
+                        query: {
+                            cacheDirectory: true,
+                            presets: ['es2015', 'react', 'stage-2'],
+                            plugins: ["transform-object-rest-spread"]
+                        }
+                    },
+                    {
+                        test: /\.css$/,
+                        loader: 'style!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'
+                    }
+                ]*/
     }
 };
