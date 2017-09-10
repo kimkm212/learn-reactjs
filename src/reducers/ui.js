@@ -1,7 +1,7 @@
 import * as types from "../actions/ActionTypes";
 
 const initialState = {
-    color : [255,255,255]
+    color : 'black'
 }
 
 export default function ui(state = initialState, action) {

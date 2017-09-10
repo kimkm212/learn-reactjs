@@ -1,10 +1,7 @@
-const webpack = require('webpack');
-const path = require('path');
-
 module.exports = {
     entry: './src/index.js',
     output: {
-        path: path.resolve(__dirname , '/public/'),
+        path: __dirname + '/public/',
         filename: 'bundle.js'
     },
 
@@ -13,7 +10,6 @@ module.exports = {
         port: 7777,
         contentBase: __dirname + '/public/'
     },
-
 
     module: {
         rules: [
